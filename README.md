@@ -5,6 +5,9 @@ This is a EMPLOYEE DEPARTMENT MANAGEMENT SYSTEM application source code;
 Let me walk you through the implementation of the system.
 
 ================================================================================================================================
+
+
+
 Installations and configurations:
 
 Step 1. Download Postgresql latest version build. Link for the postgresql download: https://www.postgresql.org/download/
