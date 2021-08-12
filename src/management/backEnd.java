@@ -454,7 +454,7 @@ public class backEnd {
 				}
 
 				Statement create_statement = connection.createStatement();
-				System.out.println(read);
+				
 				result = create_statement.executeQuery(read);
 				connection.close();
 				logs.logger.info("Search was successfull");
