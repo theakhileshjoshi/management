@@ -53,9 +53,15 @@ Run the HomePage and you will encounter Four buttons
         3. Search/Delete: This Page will give you a search engine to search for the employee details using any of the employee details like Employee ID, First Name, Last Name or Age.
         4. Back: This button will take you to the Last Page i.e the HomePage.
 
-3. Department: This section is used to 
+3. Department: This section is used to Add a Department and Search/Update a Department in the database.                Where you can delete the department.
         
-        
-  
-        
+============================================================================
+
+For the Reference Documentation Please refer to the management-master\management-master\doc\overview-tree
+
+This html page contains the documentation of the classes and programs for your reference.
+
+=============================================================================
+
+For Logs you can Refer to the Logs(Text type file) in Management folder.
         
