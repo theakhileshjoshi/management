@@ -25,3 +25,24 @@ Step 5. Navigate through the following folders management-master\management-mast
 Step 6. Open the above mentioned file "HomePage.java" in your java IDE and run it.
 
 ===============================================================================================================================
+
+
+Walk through the UI(Usr Interface):
+Run the HomePage and you will encounter Four buttons
+
+        1. Connect
+        2. Employees
+        3. Departments
+        4. Exit
+
+1. Connect to the Database/ Create a database by Logging in to your postgresql inside the app:
+       This is the first thing you have to do every time you have to make changes to the database.
+       Click on the Connect button and you will be taken to the page where you can Initialize and
+       Create the database if the database is not present.
+       Type in your Username and Password of the Postgresql(Note: If you haven't set a username its generally "postgres")
+       Press Check/Initialize connection button.
+       If the prompt says connection to the database successful. you will be redirected to the home page again.
+
+2. Employee Button:
+        
+        
