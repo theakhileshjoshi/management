@@ -1,6 +1,6 @@
 # management
 
-This is a EMPLOYEE DEPARTMENT MANAGEMENT SYSTEM application source code;
+This is a **EMPLOYEE DEPARTMENT MANAGEMENT SYSTEM** application source code;
 
 Let me walk you through the implementation of the system.
 
@@ -53,7 +53,7 @@ Run the HomePage and you will encounter Four buttons
         3. Search/Delete: This Page will give you a search engine to search for the employee details using any of the employee details like Employee ID, First Name, Last Name or Age.
         4. Back: This button will take you to the Last Page i.e the HomePage.
 
-3. Department: 
+3. Department: This section is used to 
         
         
   
