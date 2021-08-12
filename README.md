@@ -4,7 +4,8 @@ This is a EMPLOYEE DEPARTMENT MANAGEMENT SYSTEM application source code;
 
 Let me walk you through the implementation of the system.
 
-================================================================================================================================
+============================================================================
+
 
 
 
@@ -24,10 +25,11 @@ Step 5. Navigate through the following folders management-master\management-mast
 
 Step 6. Open the above mentioned file "HomePage.java" in your java IDE and run it.
 
-===============================================================================================================================
+============================================================================
 
 
-Walk through the UI(Usr Interface):
+
+Walking through the UI(User Interface):
 Run the HomePage and you will encounter Four buttons
 
         1. Connect
@@ -43,7 +45,7 @@ Run the HomePage and you will encounter Four buttons
        Press Check/Initialize connection button.
        If the prompt says connection to the database successful. you will be redirected to the home page again.
 
-2. Employee Button: This section is all about Adding employees, Alloting them a department, Changing their departments and Searching/ Updating the employee database.
+2. Employees Button: This section is all about Adding employees, Alloting them a department, Changing their departments and Searching/ Updating the employee database.
         You will encounter a Tabular view on the left hand side which is list of employees in the department and you can sort the department using  the table index . Click the top of the table to sort the columns in Ascending or Decending order .
         
         1. Create Employee: This page asks you detials for the employee to be added.
