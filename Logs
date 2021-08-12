@@ -1,0 +1,34 @@
+Aug 12, 2021 1:39:28 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 1:39:33 PM management.backEnd init
+WARNING: Error connecting to database
+Aug 12, 2021 1:39:52 PM management.backEnd enter_emp_data
+INFO: New Employ with Name: 'dandamndmnasm' 'danna,a' age: '90' added to the employee database
+Aug 12, 2021 1:40:08 PM management.backEnd addEmpToDept
+INFO: Employee no :'1' successfully added to Department no :'1' 
+Aug 12, 2021 1:40:11 PM management.backEnd searchEmpUsingID
+INFO: Employee id: '1' was searched 
+Aug 12, 2021 1:46:09 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 1:46:27 PM management.backEnd addEmpToDept
+INFO: Employee no :'1' successfully added to Department no :'1' 
+Aug 12, 2021 1:46:29 PM management.backEnd searchEmpUsingID
+INFO: Employee id: '1' was searched 
+Aug 12, 2021 1:47:47 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 1:48:07 PM management.backEnd addEmpToDept
+INFO: Employee no :'2' successfully added to Department no :'1' 
+Aug 12, 2021 1:48:09 PM management.backEnd searchEmpUsingID
+INFO: Employee id: '2' was searched 
+Aug 12, 2021 1:53:06 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 1:53:10 PM management.HomePage$5 actionPerformed
+INFO: Session ended by user
+Aug 12, 2021 1:53:19 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 1:53:25 PM management.Initialise$4 actionPerformed
+INFO: Session ended by user
+Aug 12, 2021 4:37:31 PM management.backEnd <init>
+INFO: New Session Started Successfully
+Aug 12, 2021 4:37:36 PM management.HomePage$5 actionPerformed
+INFO: Session ended by user

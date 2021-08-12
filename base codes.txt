@@ -1,0 +1,214 @@
+String jdbcURL = "jdbc:postgresql://localhost:5432/emp_dept_management";
+		
+		String username = "postgres";
+		String password = "1345";
+		
+		try {
+			Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+			System.out.println("Connected to database");
+			
+			Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+		        System.out.println("Enter First Name");
+
+		        String fname = scanner.nextLine();
+			String lname = scanner.nextLine();
+			int age = scanner.nextInt();
+			
+			String sql = "INSERT INTO emp_db(emp_fname,emp_lname,emp_age)" + "VALUES(?,?,?)";
+			
+			PreparedStatement statement = connection.prepareStatement(sql);
+			
+			
+			statement.setString(1, fname);
+			statement.setString(2, lname);
+			statement.setInt(3, age);
+			
+			int rows = statement.executeUpdate();
+			if(rows > 0) {
+				System.out.println("A member added!");
+			}
+			
+			//code to read from database
+			 String read = "SELECT * FROM emp_db";
+			
+			Statement create_statement = connection.createStatement();
+			ResultSet result = create_statement.executeQuery(read);
+			while(result.next()) {
+				int id = result.getInt("emp_id");
+				 fname = result.getString("emp_fname");
+				 lname = result.getString("emp_lname");
+				 age = result.getInt("emp_age");
+				
+				System.out.printf("%d - %s - %s - %d\n",id,fname,lname,age);
+			}
+			connection.close();
+			
+		} catch (SQLException e) {
+			System.out.println("Error connecting to database.");
+			e.printStackTrace();
+		}
+
+
+
+========================================================================================================================================================================
+//Code to search employ from employ id:
+
+String jdbcURL = "jdbc:postgresql://localhost:5432/emp_dept_management";
+		
+		String username = "postgres";
+		String password = "1345";
+		
+		try {
+			
+			Scanner scanner = new Scanner(System.in);
+			
+			System.out.println("Enter the employ id to be searched!");
+			int search_id = scanner.nextInt();
+			Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+			System.out.println("Connected to database");
+			String read = "SELECT * FROM emp_db";
+			 
+			String fname = null;
+			String lname = null;
+			int age = 0;
+			int id = 0;
+			Statement create_statement = connection.createStatement();
+			ResultSet result = create_statement.executeQuery(read);
+			while(result.next()) {
+				
+				 id = result.getInt("emp_id");
+				
+				
+				if(id == search_id) {
+					fname = result.getString("emp_fname");
+					lname = result.getString("emp_lname");
+					age = result.getInt("emp_age");
+					System.out.printf("%d - %s - %s - %d\n",id,fname,lname,age);
+					break;
+				}
+				
+			}
+			if(fname == null || lname == null ||age == 0) {
+				System.out.println("We could not find your employ");
+			}
+			connection.close();
+			
+		} catch (SQLException e) {
+			System.out.println("Error connecting to database.");
+			e.printStackTrace();
+		}
+		
+		
+===========================================================================================================================================================================
+
+Sorting in a postgresql
+
+String jdbcURL = "jdbc:postgresql://localhost:5432/emp_dept_management";
+		
+		String username = "postgres";
+		String password = "1345";
+		
+		try {
+
+			Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+			System.out.println("Connected to database");
+			String read = "SELECT * FROM emp_db ORDER BY emp_fname ASC";
+			 
+			String fname = null;
+			String lname = null;
+			int age = 0;
+			int id = 0;
+			Statement create_statement = connection.createStatement();
+			ResultSet result = create_statement.executeQuery(read);
+			while(result.next()) {
+				id = result.getInt("emp_id");
+				fname = result.getString("emp_fname");
+				lname = result.getString("emp_lname");
+				age = result.getInt("emp_age");
+				
+				System.out.printf("%d - %s - %s - %d\n",id,fname,lname,age);	
+			}
+			connection.close();
+		} catch (SQLException e) {
+			System.out.println("Error connecting to database.");
+			e.printStackTrace();
+		}
+		
+		
+===============================================================================================================================================================================
+
+Searching in a better way:
+
+String jdbcURL = "jdbc:postgresql://localhost:5432/emp_dept_management";
+		
+		String username = "postgres";
+		String password = "1345";
+		
+		try {
+
+			Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+			System.out.println("Connected to database");
+			int check = 6;
+			String read = String.format("select * from emp_db where emp_id::text like '%d'",check);
+			Statement create_statement = connection.createStatement();
+			String fname = null;
+			String lname = null;
+			int age = 0;
+			int id = 0;
+			
+			ResultSet result = create_statement.executeQuery(read);
+				while(result.next()) {
+					id = result.getInt("emp_id");
+					fname = result.getString("emp_fname");
+					lname = result.getString("emp_lname");
+					age = result.getInt("emp_age");
+					
+					System.out.printf("%d - %s - %s - %d\n",id,fname,lname,age);	
+				}
+			connection.close();
+		} catch (SQLException e) {
+			System.out.println("Error connecting to database.");
+			e.printStackTrace();
+		}
+		
+		
+======================================================================================================================================================================================
+Searching regular
+String jdbcURL = "jdbc:postgresql://localhost:5432/emp_dept_management";
+		
+		String username = "postgres";
+		String password = "1345";
+		
+		try {
+
+			Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+			System.out.println("Connected to database");
+			int check = 7;
+			String read = String.format("select * from emp_db where emp_id = '%d'",check);
+			System.out.println(read);
+			Statement create_statement = connection.createStatement();
+			String fname = null;
+			String lname = null;
+			int age = 0;
+			int id = 0;
+			
+			ResultSet result = create_statement.executeQuery(read);
+				while(result.next()) {
+					id = result.getInt("emp_id");
+					fname = result.getString("emp_fname");
+					lname = result.getString("emp_lname");
+					age = result.getInt("emp_age");
+					
+					System.out.printf("%d - %s - %s - %d\n",id,fname,lname,age);	
+				}
+			connection.close();
+		} catch (SQLException e) {
+			System.out.println("Error connecting to database.");
+			e.printStackTrace();
+		}
+		
+		
+
+=====================================================================================================================================================================================
+
+		
